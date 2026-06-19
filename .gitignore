@@ -2,3 +2,4 @@ report.json
 __pycache__/
 *.pyc
 .venv/
+sentinel/triage.py
