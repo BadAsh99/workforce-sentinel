@@ -1,0 +1,10 @@
+{
+  "name": "CIS L1 hardening failure -> MDM remediate",
+  "description": "A high-severity CIS Level 1 control failure is auto-ticketed and remediated by pushing the MDM hardening profile.",
+  "match": {"type": "hardening", "severity_in": ["high"]},
+  "actions": [
+    {"do": "open_ticket", "priority": "P2"},
+    {"do": "apply_mdm_remediation_profile", "vendor": "jamf_or_intune"},
+    {"do": "notify", "channel": "endpoint-ops"}
+  ]
+}

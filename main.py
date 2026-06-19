@@ -5,7 +5,7 @@ import glob
 import json
 import os
 
-from sentinel import posture, vulns, engine
+from sentinel import posture, vulns, engine, hardening
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SEV_WEIGHT = {"critical": 10, "high": 6, "medium": 3, "low": 1}
@@ -41,8 +41,9 @@ def main():
     playbooks = load_playbooks(args.playbooks)
 
     posture_findings = posture.scan(inventory)
+    hardening_findings = hardening.scan(inventory)
     vuln_findings = vulns.scan(inventory, cve_feed)
-    findings = posture_findings + vuln_findings
+    findings = posture_findings + hardening_findings + vuln_findings
     actions = engine.run(findings, playbooks)
     risk = risk_by_device(findings)
 
@@ -51,7 +52,7 @@ def main():
     print("=" * 66)
     print(f" Devices scanned : {len(inventory)}")
     print(f" Playbooks loaded: {len(playbooks)}")
-    print(f" Findings        : {len(findings)} ({len(posture_findings)} posture, {len(vuln_findings)} vuln)")
+    print(f" Findings        : {len(findings)} ({len(posture_findings)} posture, {len(hardening_findings)} CIS hardening, {len(vuln_findings)} vuln)")
     print(f" Playbook actions: {len(actions)}")
 
     print("\n RISK BY DEVICE (severity-weighted)")
