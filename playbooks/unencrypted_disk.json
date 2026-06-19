@@ -1,0 +1,10 @@
+{
+  "name": "Unencrypted disk -> block access (device trust)",
+  "description": "A device failing the disk-encryption baseline should not hold a trusted access posture.",
+  "match": {"type": "posture", "control": "disk_encryption"},
+  "actions": [
+    {"do": "notify", "channel": "device-owner"},
+    {"do": "open_ticket", "priority": "P2"},
+    {"do": "flag_block_access", "reason": "fails disk-encryption baseline"}
+  ]
+}

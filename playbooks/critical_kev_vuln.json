@@ -1,0 +1,11 @@
+{
+  "name": "Critical / KEV vulnerability response",
+  "description": "Any critical or known-exploited (KEV) vulnerability gets fast-tracked remediation and isolation.",
+  "match": {"type": "vuln", "severity_in": ["critical"]},
+  "actions": [
+    {"do": "open_ticket", "priority": "P1"},
+    {"do": "notify", "channel": "secops"},
+    {"do": "create_remediation_task", "sla_hours": 24},
+    {"do": "flag_for_isolation"}
+  ]
+}

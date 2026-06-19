@@ -1,0 +1,7 @@
+[
+  {"device_id":"MAC-001","hostname":"ash-mbp","os":"macOS 15.5","owner":"ash","disk_encryption":true,"firewall":true,"screen_lock":true,"os_up_to_date":true,"edr_installed":true,"installed":[{"name":"openssl","version":"3.0.11"},{"name":"curl","version":"8.6.0"}]},
+  {"device_id":"WIN-004","hostname":"fin-laptop","os":"Windows 11 22H2","owner":"jdoe","disk_encryption":false,"firewall":true,"screen_lock":false,"os_up_to_date":false,"edr_installed":true,"installed":[{"name":"log4j","version":"2.14.1"},{"name":"openssl","version":"1.0.2k"}]},
+  {"device_id":"MAC-007","hostname":"eng-mbp","os":"macOS 14.2","owner":"mlee","disk_encryption":true,"firewall":false,"screen_lock":true,"os_up_to_date":false,"edr_installed":true,"installed":[{"name":"log4j","version":"2.17.1"},{"name":"openssl","version":"3.0.13"}]},
+  {"device_id":"LNX-002","hostname":"build-server","os":"Ubuntu 22.04","owner":"ci","disk_encryption":false,"firewall":true,"screen_lock":true,"os_up_to_date":true,"edr_installed":false,"installed":[{"name":"openssl","version":"1.0.1f"},{"name":"sudo","version":"1.9.5"}]},
+  {"device_id":"WIN-011","hostname":"sales-laptop","os":"Windows 10 21H2","owner":"kchen","disk_encryption":true,"firewall":true,"screen_lock":true,"os_up_to_date":true,"edr_installed":true,"installed":[{"name":"curl","version":"7.68.0"},{"name":"openssl","version":"3.0.13"}]}
+]

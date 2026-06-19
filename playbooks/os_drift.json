@@ -1,0 +1,9 @@
+{
+  "name": "OS configuration drift -> patch",
+  "description": "Devices off the OS patch baseline are scheduled for remediation and flagged to endpoint ops.",
+  "match": {"type": "posture", "control": "os_up_to_date"},
+  "actions": [
+    {"do": "schedule_patch"},
+    {"do": "notify", "channel": "endpoint-ops"}
+  ]
+}

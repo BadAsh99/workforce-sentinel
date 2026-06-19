@@ -1,0 +1,7 @@
+[
+  {"cve":"CVE-2021-44228","name":"Log4Shell","product":"log4j","affected":"<2.15.0","cvss":10.0,"kev":true},
+  {"cve":"CVE-2014-0160","name":"Heartbleed","product":"openssl","affected":"1.0.1*","cvss":7.5,"kev":true},
+  {"cve":"CVE-2016-2107","name":"OpenSSL Padding Oracle","product":"openssl","affected":"1.0.2k","cvss":5.9,"kev":false},
+  {"cve":"CVE-2021-3156","name":"Sudo Baron Samedit","product":"sudo","affected":"<1.9.5p2","cvss":7.8,"kev":true},
+  {"cve":"CVE-2023-38545","name":"curl SOCKS5 heap overflow","product":"curl","affected":"<8.4.0","cvss":8.8,"kev":false}
+]
